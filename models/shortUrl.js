@@ -1,7 +1,8 @@
+// Import required dependencies
 const mongoose = require('mongoose') 
 const shortId = require('shortid') 
 
-
+// Define the Short URL schema
 const shortUrlSchema= new mongoose.Schema({
   full:{
     type: String,
@@ -20,4 +21,5 @@ const shortUrlSchema= new mongoose.Schema({
 }) 
 
 
+// Create and export the ShortUrl model based on the schema
 module.exports=mongoose.model('shortUrl',shortUrlSchema);
